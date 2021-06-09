@@ -17,6 +17,8 @@ Do the following:
 
    HINT: no function required
 */
+var votingAge = 18;
+console.log(votingAge >= 18);
 
 
 
@@ -30,8 +32,13 @@ Do the following:
 
    HINT: no function required
 */
+var firstVar = 20;
+var secondVar = 15;
 
-
+if(firstVar == 20){
+  firstVar = (firstVar * secondVar)
+  console.log(firstVar)
+}
 
 
 
@@ -45,7 +52,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-
+var string1 = '1999';
+Number(string1);
+console.log(string1);
 
 
 
@@ -58,8 +67,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+    return a * b;
   }
 
 
@@ -74,8 +83,8 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(year){
+    return year * 7;
 }
 
 
@@ -149,10 +158,43 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+let randomNumber = Math.random();
+let computerChoice;
+if(randomNumber < 1/3){
+  computerChoice = 'rock';
+}else if(randomNumber >= 1/3 && randomNumber <= 2/3){
+  computerChoice = 'paper';
+}else if (randomNumber > 2/3){
+  computerChoice = 'scissors'
+}
+
 
 function game(user, computer){
-    /*add your code here*/
+    if (user === 'rock' && computer === 'rock'){
+      return `it's a tie`;
+    }else if (user === 'paper' && computer === 'paper'){
+      return `it's a tie`;
+    }else if (user === 'scissors' && computer === 'scissors'){
+      return `it's a tie`;
+    }else if (user === 'rock' && computer ==='paper'){
+      return 'you lose!';
+    }else if (user === 'rock' && computer ==='scissors'){
+      return 'you win!' ;
+    }else if (user === 'paper' && computer ==='rock'){
+      return 'you win!' ;
+    }else if (user === 'paper' && computer === 'scissors'){
+      return 'you lose!';
+    }else if (user === 'scissors' && computer === 'paper'){
+      return 'you win!' ;
+    }else if (user === 'scissors' && computer === 'rock'){
+      return 'you lose!'
+    }
+
+
 }
+  /User chooses rock/
+  console.log(game('rock',computerChoice))
+
   
   
 
@@ -167,7 +209,7 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
+function miles(){
     /*add your code here*/
   }
 
